@@ -1,0 +1,18 @@
+Requirements
+    - Listen on a PORT, accepts incoming HTTP requests for POST, GET, PUT, DELETE and HEAD.
+    - Allow client to connect, create new user, edit and delete that user.
+    - Allow user to "sign in", which gives them a token, that they can use for subsequent authenticated requests.
+    - Allow user to "sign out", which invalidates their token.
+    - Allow signed-in user to use their token to create a new "check" (task for the system to check if given URL is up or down). Allow user to define what up or down is.
+    - Allow signed-in user to edit or delete any of their checks. Limit their checks to five. 
+    - In the background, perform all the checks at the appropriate times, and alert the user when check changes it state from up to down or vice versa.
+
+
+Useful comment about security on tokens.
+    First of all, thank you for the time taken to create this course. I am finding it very interesting as my first serious approach to Node.js. 
+
+    The way a token is created in this video is not security safe. An authentication must not leak information of whether the "user" or the "password" is correct. 
+
+    To be strictly correct, the error in case the phone does not exist and/or the password is not correct must be the same. Moreover, there must be no difference in the response time of each of the two possible validation errors. In this case, the API is not only returning different errors but also taking on different actions until it returns an error. 
+
+    I understand that this is not in the scope of this course. However, it wouldn't hurt just to mention this caveat to avoid any other person seeing an API authorization for the first time believe that this is the correct way to go. 
