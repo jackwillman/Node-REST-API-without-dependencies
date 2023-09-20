@@ -9,8 +9,6 @@ Requirements
 
 
 Useful comment about security on tokens.
-    First of all, thank you for the time taken to create this course. I am finding it very interesting as my first serious approach to Node.js. 
-
     The way a token is created in this video is not security safe. An authentication must not leak information of whether the "user" or the "password" is correct. 
 
     To be strictly correct, the error in case the phone does not exist and/or the password is not correct must be the same. Moreover, there must be no difference in the response time of each of the two possible validation errors. In this case, the API is not only returning different errors but also taking on different actions until it returns an error. 
